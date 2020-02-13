@@ -496,7 +496,7 @@ func TestGetListOfAccountsWithClients(t *testing.T) {
 }
 
 func TestPayForService(t *testing.T) {
-	db, err := sql.Open("sqlite3", ":memory:")
+	db, err := sql.Open("sqlite3", "db1.sqlite")
 	if err != nil {
 		t.Errorf("can't open db: %v", err)
 	}
@@ -570,7 +570,7 @@ func TestChangeClientStatus(t *testing.T) {
 }
 
 func TestTransferToByAccountId(t *testing.T) {
-	db, err := sql.Open("sqlite3", ":memory:")
+	db, err := sql.Open("sqlite3", "db2.sqlite")
 	if err != nil {
 		t.Errorf("can't open db: %v", err)
 	}
@@ -612,7 +612,7 @@ func TestTransferToByAccountId(t *testing.T) {
 }
 
 func TestTransferToByPhoneNumber(t *testing.T) {
-	db, err := sql.Open("sqlite3", ":memory:")
+	db, err := sql.Open("sqlite3", "db3.sqlite")
 	if err != nil {
 		t.Errorf("can't open db: %v", err)
 	}
@@ -726,7 +726,7 @@ func TestImportListOfATMs(t *testing.T) {
 }
 
 func TestGetJournalListFormatted(t *testing.T) {
-	db, err := sql.Open("sqlite3", ":memory:")
+	db, err := sql.Open("sqlite3", "db4.sqlite")
 	if err != nil {
 		t.Errorf("can't open db: %v", err)
 	}
