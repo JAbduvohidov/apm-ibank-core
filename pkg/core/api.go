@@ -50,7 +50,7 @@ type Client struct {
 	Id          int64
 	Name        string
 	Login       string
-	Password    int64
+	Password    string
 	PhoneNumber int64
 	Status      string
 }
